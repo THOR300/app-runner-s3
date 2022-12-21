@@ -1,0 +1,7 @@
+include .env
+
+build:
+	docker build -t app-runner-s3 .
+
+run:
+	docker run -p 5000:8081 -e BUCKET_NAME="${BUCKET_NAME}" -e AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" -e AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}" app-runner-s3

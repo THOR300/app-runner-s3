@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  Python_Docker_Flask:
+      build: .
+      image: pdf:latest
+      container_name: pdf
+      restart: always
+      ports:
+      - 5000:8081
